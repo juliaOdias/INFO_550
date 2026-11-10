@@ -1,7 +1,6 @@
 import numpy as np
 
 class ConnectFour:
-    """Connect Four rules and board state for two players."""
     def __init__(self):
         self.board = np.zeros((6, 7), dtype=int)
         self.current_player = 1
@@ -46,7 +45,6 @@ class ConnectFour:
         print("-------------")
 
     def evaluate_board(self):
-        # Center column is highly valued in Connect 4
         score = 0
         center_array = self.board[:, 3]
         score += np.sum(center_array == 1) * 3
