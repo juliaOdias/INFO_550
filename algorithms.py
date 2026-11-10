@@ -1,6 +1,7 @@
 
 import random
 import copy
+import math
 
 class RandomAgent:
 
@@ -103,3 +104,99 @@ class MinimaxAgent:
                     break
 
             return best_score
+
+class MCTSNode:
+    def __init__(self, game, parent=None, move=None):
+        self.game = game
+        self.parent = parent
+        self.move = move
+        self.children = []
+        self.visits = 0
+        self.wins = 0.0
+
+        self.untried_moves = game.get_valid_moves()
+
+        # Othello may require passing a turn
+        if not self.untried_moves and game.check_winner() is None:
+            self.untried_moves = [None]
+
+    def ucb1(self, exploration=1.414):
+        if self.visits == 0:
+            return float("inf")
+
+        exploitation = self.wins / self.visits
+        exploration_term = exploration * math.sqrt(
+            math.log(self.parent.visits) / self.visits
+        )
+
+        return exploitation + exploration_term
+
+
+class MCTSAgent:
+    def __init__(self, iterations=100, seed=None):
+        self.iterations = iterations
+        self.rng = random.Random(seed)
+
+    def choose_move(self, game):
+        moves = game.get_valid_moves()
+
+        if not moves:
+            return None
+
+        root = MCTSNode(copy.deepcopy(game))
+
+        for _ in range(self.iterations):
+            node = root
+
+            while not node.untried_moves and node.children:
+                node = max(
+                    node.children,
+                    key=lambda child: (
+                        -child.wins / child.visits
+                        + 1.414 * math.sqrt(
+                            math.log(node.visits) / child.visits
+                        )
+                    )
+                )
+
+            if node.untried_moves:
+                move = self.rng.choice(node.untried_moves)
+                node.untried_moves.remove(move)
+
+                next_game = copy.deepcopy(node.game)
+                next_game.make_move(move)
+
+                child = MCTSNode(next_game, parent=node, move=move)
+                node.children.append(child)
+                node = child
+
+            simulation = copy.deepcopy(node.game)
+
+            while simulation.check_winner() is None:
+                valid_moves = simulation.get_valid_moves()
+
+                if valid_moves:
+                    move = self.rng.choice(valid_moves)
+                    simulation.make_move(move)
+                else:
+                    simulation.make_move(None)
+
+            winner = simulation.check_winner()
+
+            while node is not None:
+                node.visits += 1
+                previous_player = -node.game.current_player
+
+                if winner == previous_player:
+                    node.wins += 1
+                elif winner == 0:
+                    node.wins += 0.5
+
+                node = node.parent
+
+        best_child = max(
+            root.children,
+            key=lambda child: child.visits
+        )
+
+        return best_child.move
