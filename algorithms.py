@@ -16,7 +16,6 @@ class RandomAgent:
 
         return self.rng.choice(valid_moves)
 
-
 class MinimaxAgent:
     def __init__(self, max_depth=3):
         self.max_depth = max_depth
@@ -116,7 +115,6 @@ class MCTSNode:
 
         self.untried_moves = game.get_valid_moves()
 
-        # Othello may require passing a turn
         if not self.untried_moves and game.check_winner() is None:
             self.untried_moves = [None]
 
@@ -130,7 +128,6 @@ class MCTSNode:
         )
 
         return exploitation + exploration_term
-
 
 class MCTSAgent:
     def __init__(self, iterations=100, seed=None):
@@ -151,12 +148,7 @@ class MCTSAgent:
             while not node.untried_moves and node.children:
                 node = max(
                     node.children,
-                    key=lambda child: (
-                        -child.wins / child.visits
-                        + 1.414 * math.sqrt(
-                            math.log(node.visits) / child.visits
-                        )
-                    )
+                    key=lambda child: child.ucb1()
                 )
 
             if node.untried_moves:

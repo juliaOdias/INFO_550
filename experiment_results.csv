@@ -1,0 +1,17 @@
+game,stage,position,occupancy,minimax_player,winner
+Connect Four,Early,1,0.214,1,MCTS
+Connect Four,Early,1,0.214,-1,MCTS
+Connect Four,Early,2,0.214,1,Minimax
+Connect Four,Early,2,0.214,-1,Minimax
+Connect Four,Endgame,1,0.714,1,Minimax
+Connect Four,Endgame,1,0.714,-1,Minimax
+Connect Four,Endgame,2,0.714,1,Minimax
+Connect Four,Endgame,2,0.714,-1,MCTS
+Othello,Early,1,0.203,1,MCTS
+Othello,Early,1,0.203,-1,MCTS
+Othello,Early,2,0.203,1,MCTS
+Othello,Early,2,0.203,-1,MCTS
+Othello,Endgame,1,0.703,1,Minimax
+Othello,Endgame,1,0.703,-1,MCTS
+Othello,Endgame,2,0.703,1,MCTS
+Othello,Endgame,2,0.703,-1,MCTS
