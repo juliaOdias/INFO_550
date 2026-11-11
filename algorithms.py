@@ -20,6 +20,36 @@ class MinimaxAgent:
     def __init__(self, max_depth=3):
         self.max_depth = max_depth
 
+    
+    def order_moves(self, game, moves, player):
+        scored_moves = []
+
+        for move in moves:
+            next_game = copy.deepcopy(game)
+            next_game.make_move(move)
+
+            winner = next_game.check_winner()
+
+            if winner == player:
+                score = 100000
+            elif winner == -player:
+                score = -100000
+            elif winner == 0:
+                score = 0
+            else:
+                score = next_game.evaluate_board() * player
+
+            scored_moves.append((score, move))
+
+        scored_moves.sort(
+            key=lambda item: item[0],
+            reverse=True
+        )
+
+        return [move for score, move in scored_moves]
+
+
+    
     def choose_move(self, game):
         moves = game.get_valid_moves()
 
@@ -27,6 +57,8 @@ class MinimaxAgent:
             return None
 
         player = game.current_player
+        moves = self.order_moves(game, moves, player)
+
         best_score = float("-inf")
         best_move = moves[0]
 
@@ -37,7 +69,13 @@ class MinimaxAgent:
             next_game = copy.deepcopy(game)
             next_game.make_move(move)
 
-            score = self.minimax(next_game, self.max_depth - 1, alpha, beta, player)
+            score = self.minimax(
+                next_game,
+                self.max_depth - 1,
+                alpha,
+                beta,
+                player
+            )
 
             if score > best_score:
                 best_score = score
@@ -61,6 +99,7 @@ class MinimaxAgent:
             return game.evaluate_board() * player
 
         moves = game.get_valid_moves()
+
 
         if not moves:
             next_game = copy.deepcopy(game)
