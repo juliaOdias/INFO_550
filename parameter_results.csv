@@ -1,0 +1,193 @@
+game,stage,position,occupancy,depth,iterations,minimax_player,seed,winner,minimax_time,mcts_time,moves_count
+Connect Four,Early,1,0.214,2,40,1,512080,Minimax,0.0313,0.0778,6
+Connect Four,Early,1,0.214,2,40,-1,512081,Minimax,0.0518,0.0728,9
+Connect Four,Endgame,1,0.714,2,40,1,612080,Minimax,0.0096,0.0063,3
+Connect Four,Endgame,1,0.714,2,40,-1,612081,MCTS,0.0026,0.0166,3
+Othello,Early,1,0.203,2,40,1,1512080,MCTS,0.4719,9.23,51
+Othello,Early,1,0.203,2,40,-1,1512081,MCTS,0.3623,8.6195,53
+Othello,Endgame,1,0.703,2,40,1,1612080,Minimax,0.0629,0.7175,20
+Othello,Endgame,1,0.703,2,40,-1,1612081,MCTS,0.0702,0.6984,19
+Connect Four,Early,1,0.214,2,120,1,512240,Minimax,0.0875,0.5559,22
+Connect Four,Early,1,0.214,2,120,-1,512241,Minimax,0.0846,0.3398,23
+Connect Four,Early,1,0.214,2,300,1,512600,Minimax,0.0749,1.1323,20
+Connect Four,Early,1,0.214,2,300,-1,512601,Minimax,0.0858,0.973,17
+Connect Four,Early,1,0.214,2,500,1,513000,MCTS,0.0883,2.1571,25
+Connect Four,Early,1,0.214,2,500,-1,513001,Minimax,0.078,1.325,23
+Connect Four,Early,1,0.214,3,40,1,513080,Minimax,0.1548,0.091,8
+Connect Four,Early,1,0.214,3,40,-1,513081,Minimax,0.2941,0.0876,11
+Connect Four,Early,1,0.214,3,120,1,513240,MCTS,0.4468,0.7182,29
+Connect Four,Early,1,0.214,3,120,-1,513241,Minimax,0.2206,0.1992,9
+Connect Four,Early,1,0.214,3,300,1,513600,Minimax,0.2212,0.9026,14
+Connect Four,Early,1,0.214,3,300,-1,513601,Minimax,0.3468,0.8384,21
+Connect Four,Early,1,0.214,3,500,1,514000,Minimax,0.2356,1.3561,14
+Connect Four,Early,1,0.214,3,500,-1,514001,Minimax,0.3469,1.4714,15
+Connect Four,Early,1,0.214,4,40,1,514080,Minimax,0.2449,0.073,6
+Connect Four,Early,1,0.214,4,40,-1,514081,Minimax,0.4754,0.0675,9
+Connect Four,Early,1,0.214,4,120,1,514240,Minimax,1.0692,0.517,20
+Connect Four,Early,1,0.214,4,120,-1,514241,Minimax,0.6026,0.2066,9
+Connect Four,Early,1,0.214,4,300,1,514600,Draw,1.2016,1.8592,33
+Connect Four,Early,1,0.214,4,300,-1,514601,Minimax,0.7585,0.8941,15
+Connect Four,Early,1,0.214,4,500,1,515000,Minimax,0.4174,1.3864,14
+Connect Four,Early,1,0.214,4,500,-1,515001,Minimax,0.5992,1.1801,23
+Connect Four,Early,2,0.214,2,40,1,522080,Minimax,0.1041,0.173,16
+Connect Four,Early,2,0.214,2,40,-1,522081,Minimax,0.0538,0.1385,13
+Connect Four,Early,2,0.214,2,120,1,522240,Minimax,0.0934,0.8068,32
+Connect Four,Early,2,0.214,2,120,-1,522241,Minimax,0.0811,0.5539,21
+Connect Four,Early,2,0.214,2,300,1,522600,Minimax,0.0942,1.4676,20
+Connect Four,Early,2,0.214,2,300,-1,522601,Minimax,0.073,1.0291,15
+Connect Four,Early,2,0.214,2,500,1,523000,MCTS,0.0902,2.4348,25
+Connect Four,Early,2,0.214,2,500,-1,523001,MCTS,0.1051,2.3905,28
+Connect Four,Early,2,0.214,3,40,1,523080,Minimax,0.2415,0.1814,16
+Connect Four,Early,2,0.214,3,40,-1,523081,Minimax,0.4501,0.1712,17
+Connect Four,Early,2,0.214,3,120,1,523240,Minimax,0.4145,0.7461,20
+Connect Four,Early,2,0.214,3,120,-1,523241,Minimax,0.1394,0.1588,5
+Connect Four,Early,2,0.214,3,300,1,523600,Minimax,0.3442,1.3043,24
+Connect Four,Early,2,0.214,3,300,-1,523601,Minimax,0.3759,1.0352,17
+Connect Four,Early,2,0.214,3,500,1,524000,Draw,0.3478,3.0741,33
+Connect Four,Early,2,0.214,3,500,-1,524001,Minimax,0.1459,0.5665,5
+Connect Four,Early,2,0.214,4,40,1,524080,Minimax,1.3594,0.2265,18
+Connect Four,Early,2,0.214,4,40,-1,524081,Minimax,0.7557,0.1562,15
+Connect Four,Early,2,0.214,4,120,1,524240,Minimax,1.0688,0.5318,24
+Connect Four,Early,2,0.214,4,120,-1,524241,Minimax,0.8843,0.5394,27
+Connect Four,Early,2,0.214,4,300,1,524600,Minimax,1.1343,1.4618,22
+Connect Four,Early,2,0.214,4,300,-1,524601,Minimax,0.8756,1.6521,27
+Connect Four,Early,2,0.214,4,500,1,525000,Minimax,0.841,2.4802,24
+Connect Four,Early,2,0.214,4,500,-1,525001,MCTS,1.4743,2.5832,30
+Connect Four,Endgame,1,0.714,2,120,1,612240,Minimax,0.0087,0.0203,3
+Connect Four,Endgame,1,0.714,2,120,-1,612241,MCTS,0.0026,0.0409,3
+Connect Four,Endgame,1,0.714,2,300,1,612600,Minimax,0.0065,0.0424,3
+Connect Four,Endgame,1,0.714,2,300,-1,612601,MCTS,0.0034,0.0962,3
+Connect Four,Endgame,1,0.714,2,500,1,613000,Minimax,0.0091,0.0575,3
+Connect Four,Endgame,1,0.714,2,500,-1,613001,MCTS,0.0043,0.1534,3
+Connect Four,Endgame,1,0.714,3,40,1,613080,Minimax,0.0143,0.0086,3
+Connect Four,Endgame,1,0.714,3,40,-1,613081,MCTS,0.0162,0.0328,5
+Connect Four,Endgame,1,0.714,3,120,1,613240,Minimax,0.0112,0.0148,3
+Connect Four,Endgame,1,0.714,3,120,-1,613241,MCTS,0.0134,0.0576,5
+Connect Four,Endgame,1,0.714,3,300,1,613600,Minimax,0.0135,0.0372,3
+Connect Four,Endgame,1,0.714,3,300,-1,613601,MCTS,0.0037,0.1064,3
+Connect Four,Endgame,1,0.714,3,500,1,614000,Minimax,0.0107,0.0551,3
+Connect Four,Endgame,1,0.714,3,500,-1,614001,MCTS,0.0042,0.1437,3
+Connect Four,Endgame,1,0.714,4,40,1,614080,Minimax,0.0167,0.0137,3
+Connect Four,Endgame,1,0.714,4,40,-1,614081,MCTS,0.0183,0.0228,5
+Connect Four,Endgame,1,0.714,4,120,1,614240,Minimax,0.0122,0.0162,3
+Connect Four,Endgame,1,0.714,4,120,-1,614241,MCTS,0.0162,0.0615,5
+Connect Four,Endgame,1,0.714,4,300,1,614600,Minimax,0.0138,0.0368,3
+Connect Four,Endgame,1,0.714,4,300,-1,614601,MCTS,0.0058,0.1036,3
+Connect Four,Endgame,1,0.714,4,500,1,615000,Minimax,0.0131,0.0553,3
+Connect Four,Endgame,1,0.714,4,500,-1,615001,MCTS,0.0069,0.1522,3
+Connect Four,Endgame,2,0.714,2,40,1,622080,Minimax,0.0026,0.0,1
+Connect Four,Endgame,2,0.714,2,40,-1,622081,MCTS,0.0,0.0057,1
+Connect Four,Endgame,2,0.714,2,120,1,622240,Minimax,0.0015,0.0,1
+Connect Four,Endgame,2,0.714,2,120,-1,622241,MCTS,0.0,0.0165,1
+Connect Four,Endgame,2,0.714,2,300,1,622600,Minimax,0.0024,0.0,1
+Connect Four,Endgame,2,0.714,2,300,-1,622601,MCTS,0.0,0.0258,1
+Connect Four,Endgame,2,0.714,2,500,1,623000,Minimax,0.0026,0.0,1
+Connect Four,Endgame,2,0.714,2,500,-1,623001,MCTS,0.0,0.043,1
+Connect Four,Endgame,2,0.714,3,40,1,623080,Minimax,0.0043,0.0,1
+Connect Four,Endgame,2,0.714,3,40,-1,623081,MCTS,0.0,0.0043,1
+Connect Four,Endgame,2,0.714,3,120,1,623240,Minimax,0.0028,0.0,1
+Connect Four,Endgame,2,0.714,3,120,-1,623241,MCTS,0.0,0.0105,1
+Connect Four,Endgame,2,0.714,3,300,1,623600,Minimax,0.0024,0.0,1
+Connect Four,Endgame,2,0.714,3,300,-1,623601,MCTS,0.0,0.033,1
+Connect Four,Endgame,2,0.714,3,500,1,624000,Minimax,0.0048,0.0,1
+Connect Four,Endgame,2,0.714,3,500,-1,624001,MCTS,0.0,0.0427,1
+Connect Four,Endgame,2,0.714,4,40,1,624080,Minimax,0.0046,0.0,1
+Connect Four,Endgame,2,0.714,4,40,-1,624081,MCTS,0.0,0.0044,1
+Connect Four,Endgame,2,0.714,4,120,1,624240,Minimax,0.0026,0.0,1
+Connect Four,Endgame,2,0.714,4,120,-1,624241,MCTS,0.0,0.0126,1
+Connect Four,Endgame,2,0.714,4,300,1,624600,Minimax,0.0026,0.0,1
+Connect Four,Endgame,2,0.714,4,300,-1,624601,MCTS,0.0,0.0299,1
+Connect Four,Endgame,2,0.714,4,500,1,625000,Minimax,0.0032,0.0,1
+Connect Four,Endgame,2,0.714,4,500,-1,625001,MCTS,0.0,0.0503,1
+Othello,Early,1,0.203,2,120,1,1512240,MCTS,0.5769,25.4738,51
+Othello,Early,1,0.203,2,120,-1,1512241,MCTS,0.4141,24.8933,52
+Othello,Early,1,0.203,2,300,1,1512600,MCTS,0.5227,63.0353,51
+Othello,Early,1,0.203,2,300,-1,1512601,MCTS,0.4911,60.8303,52
+Othello,Early,1,0.203,2,500,1,1513000,MCTS,0.5388,103.9275,52
+Othello,Early,1,0.203,2,500,-1,1513001,MCTS,0.4293,100.5659,54
+Othello,Early,1,0.203,3,40,1,1513080,MCTS,2.7236,8.7155,51
+Othello,Early,1,0.203,3,40,-1,1513081,Draw,4.0902,8.3537,52
+Othello,Early,1,0.203,3,120,1,1513240,MCTS,3.2442,25.772,51
+Othello,Early,1,0.203,3,120,-1,1513241,MCTS,2.9726,24.6174,51
+Othello,Early,1,0.203,3,300,1,1513600,MCTS,1.5947,61.9568,51
+Othello,Early,1,0.203,3,300,-1,1513601,MCTS,2.7641,58.8989,51
+Othello,Early,1,0.203,3,500,1,1514000,MCTS,2.8426,103.5473,51
+Othello,Early,1,0.203,3,500,-1,1514001,MCTS,1.6499,100.9227,54
+Othello,Early,1,0.203,4,40,1,1514080,MCTS,10.5622,8.7476,51
+Othello,Early,1,0.203,4,40,-1,1514081,Minimax,6.8687,7.9998,51
+Othello,Early,1,0.203,4,120,1,1514240,MCTS,11.8644,25.7093,53
+Othello,Early,1,0.203,4,120,-1,1514241,MCTS,5.4397,24.654,52
+Othello,Early,1,0.203,4,300,1,1514600,MCTS,12.7545,63.2054,51
+Othello,Early,1,0.203,4,300,-1,1514601,MCTS,7.3394,60.2129,52
+Othello,Early,1,0.203,4,500,1,1515000,MCTS,10.4139,103.6202,51
+Othello,Early,1,0.203,4,500,-1,1515001,Minimax,10.4713,99.1005,51
+Othello,Early,2,0.203,2,40,1,1522080,MCTS,0.5582,8.8047,51
+Othello,Early,2,0.203,2,40,-1,1522081,Draw,0.3698,8.5843,52
+Othello,Early,2,0.203,2,120,1,1522240,MCTS,0.4905,25.8064,51
+Othello,Early,2,0.203,2,120,-1,1522241,MCTS,0.6201,24.6294,52
+Othello,Early,2,0.203,2,300,1,1522600,MCTS,0.4044,62.0443,51
+Othello,Early,2,0.203,2,300,-1,1522601,MCTS,0.5738,62.8743,51
+Othello,Early,2,0.203,2,500,1,1523000,MCTS,0.5339,104.8125,51
+Othello,Early,2,0.203,2,500,-1,1523001,MCTS,0.4939,98.6645,52
+Othello,Early,2,0.203,3,40,1,1523080,Minimax,2.7446,8.7944,52
+Othello,Early,2,0.203,3,40,-1,1523081,MCTS,3.3526,8.3466,54
+Othello,Early,2,0.203,3,120,1,1523240,MCTS,2.1479,24.9027,51
+Othello,Early,2,0.203,3,120,-1,1523241,MCTS,3.012,24.8662,52
+Othello,Early,2,0.203,3,300,1,1523600,MCTS,3.0409,62.7339,51
+Othello,Early,2,0.203,3,300,-1,1523601,MCTS,2.5635,59.6916,54
+Othello,Early,2,0.203,3,500,1,1524000,MCTS,2.6132,102.0773,51
+Othello,Early,2,0.203,3,500,-1,1524001,MCTS,3.8074,99.386,52
+Othello,Early,2,0.203,4,40,1,1524080,Minimax,10.136,8.7037,52
+Othello,Early,2,0.203,4,40,-1,1524081,Minimax,9.79,8.3598,51
+Othello,Early,2,0.203,4,120,1,1524240,Minimax,10.0441,25.4794,51
+Othello,Early,2,0.203,4,120,-1,1524241,Minimax,12.2386,24.2368,54
+Othello,Early,2,0.203,4,300,1,1524600,MCTS,15.9929,100.0936,51
+Othello,Early,2,0.203,4,300,-1,1524601,MCTS,9.6527,61.7717,51
+Othello,Early,2,0.203,4,500,1,1525000,Minimax,8.5145,104.3518,51
+Othello,Early,2,0.203,4,500,-1,1525001,Minimax,7.4815,101.8369,51
+Othello,Endgame,1,0.703,2,120,1,1612240,Minimax,0.058,1.9949,20
+Othello,Endgame,1,0.703,2,120,-1,1612241,MCTS,0.0713,1.8878,20
+Othello,Endgame,1,0.703,2,300,1,1612600,Minimax,0.0676,4.8186,20
+Othello,Endgame,1,0.703,2,300,-1,1612601,MCTS,0.0831,4.3126,19
+Othello,Endgame,1,0.703,2,500,1,1613000,Minimax,0.0741,7.6729,19
+Othello,Endgame,1,0.703,2,500,-1,1613001,MCTS,0.051,6.7905,22
+Othello,Endgame,1,0.703,3,40,1,1613080,Minimax,0.3951,0.7084,20
+Othello,Endgame,1,0.703,3,40,-1,1613081,MCTS,0.3292,0.6244,20
+Othello,Endgame,1,0.703,3,120,1,1613240,Minimax,0.4112,2.1429,20
+Othello,Endgame,1,0.703,3,120,-1,1613241,MCTS,0.3861,1.7762,21
+Othello,Endgame,1,0.703,3,300,1,1613600,Minimax,0.3155,4.7842,20
+Othello,Endgame,1,0.703,3,300,-1,1613601,MCTS,0.3177,4.254,19
+Othello,Endgame,1,0.703,3,500,1,1614000,Minimax,0.3951,7.8389,19
+Othello,Endgame,1,0.703,3,500,-1,1614001,MCTS,0.3692,6.6888,19
+Othello,Endgame,1,0.703,4,40,1,1614080,Minimax,0.6966,0.7178,19
+Othello,Endgame,1,0.703,4,40,-1,1614081,MCTS,1.2103,0.64,19
+Othello,Endgame,1,0.703,4,120,1,1614240,Minimax,0.5961,1.9806,22
+Othello,Endgame,1,0.703,4,120,-1,1614241,MCTS,1.1238,1.8586,20
+Othello,Endgame,1,0.703,4,300,1,1614600,Minimax,0.7544,4.7365,19
+Othello,Endgame,1,0.703,4,300,-1,1614601,MCTS,1.3351,4.2835,20
+Othello,Endgame,1,0.703,4,500,1,1615000,Minimax,0.6949,7.7491,19
+Othello,Endgame,1,0.703,4,500,-1,1615001,MCTS,1.1293,6.8468,20
+Othello,Endgame,2,0.703,2,40,1,1622080,Minimax,0.0905,0.7583,20
+Othello,Endgame,2,0.703,2,40,-1,1622081,MCTS,0.0644,0.6404,20
+Othello,Endgame,2,0.703,2,120,1,1622240,Minimax,0.0963,2.05,19
+Othello,Endgame,2,0.703,2,120,-1,1622241,MCTS,0.0565,1.7304,20
+Othello,Endgame,2,0.703,2,300,1,1622600,Minimax,0.0603,4.6835,19
+Othello,Endgame,2,0.703,2,300,-1,1622601,MCTS,0.0776,4.016,19
+Othello,Endgame,2,0.703,2,500,1,1623000,MCTS,0.0521,7.9089,21
+Othello,Endgame,2,0.703,2,500,-1,1623001,MCTS,0.0615,6.5311,19
+Othello,Endgame,2,0.703,3,40,1,1623080,Minimax,0.2184,0.7378,19
+Othello,Endgame,2,0.703,3,40,-1,1623081,MCTS,0.2858,0.6466,19
+Othello,Endgame,2,0.703,3,120,1,1623240,MCTS,0.3005,2.0286,19
+Othello,Endgame,2,0.703,3,120,-1,1623241,MCTS,0.2572,1.7315,19
+Othello,Endgame,2,0.703,3,300,1,1623600,Minimax,0.3395,4.7717,19
+Othello,Endgame,2,0.703,3,300,-1,1623601,MCTS,0.2356,4.2402,19
+Othello,Endgame,2,0.703,3,500,1,1624000,MCTS,0.2606,8.2094,19
+Othello,Endgame,2,0.703,3,500,-1,1624001,MCTS,0.2674,6.837,20
+Othello,Endgame,2,0.703,4,40,1,1624080,Minimax,0.543,0.744,19
+Othello,Endgame,2,0.703,4,40,-1,1624081,MCTS,0.6223,0.6274,20
+Othello,Endgame,2,0.703,4,120,1,1624240,Minimax,0.7706,1.9667,22
+Othello,Endgame,2,0.703,4,120,-1,1624241,MCTS,0.6426,1.7371,19
+Othello,Endgame,2,0.703,4,300,1,1624600,Minimax,1.001,4.916,19
+Othello,Endgame,2,0.703,4,300,-1,1624601,MCTS,0.4973,3.9172,19
+Othello,Endgame,2,0.703,4,500,1,1625000,Minimax,0.7571,7.8791,19
+Othello,Endgame,2,0.703,4,500,-1,1625001,MCTS,0.4798,6.0692,19

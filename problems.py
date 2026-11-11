@@ -71,20 +71,14 @@ class ConnectFour:
             # Center column control
             center = list(self.board[:, 3])
             score += center.count(player) * 6
-
-            # Horizontal windows
             for row in range(6):
                 for col in range(4):
                     window = list(self.board[row, col:col + 4])
                     score += score_window(window, player)
-
-            # Vertical windows
             for row in range(3):
                 for col in range(7):
                     window = list(self.board[row:row + 4, col])
                     score += score_window(window, player)
-
-            # Diagonal windows: down-right
             for row in range(3):
                 for col in range(4):
                     window = [
@@ -92,8 +86,6 @@ class ConnectFour:
                         for i in range(4)
                     ]
                     score += score_window(window, player)
-
-            # Diagonal windows: up-right
             for row in range(3, 6):
                 for col in range(4):
                     window = [
@@ -104,8 +96,6 @@ class ConnectFour:
 
             return score
 
-        # Positive scores favor player 1.
-        # Negative scores favor player -1.
         return (
             evaluate_player(1) -
             evaluate_player(-1)
@@ -117,7 +107,6 @@ class Othello:
         self.board = np.zeros((8, 8), dtype=int)
         self.current_player = 1
 
-        # Starting pieces
         self.board[3, 3] = -1
         self.board[3, 4] = 1
         self.board[4, 3] = 1
