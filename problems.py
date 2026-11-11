@@ -44,12 +44,72 @@ class ConnectFour:
             print(" ".join([symbols[x] for x in row]))
         print("-------------")
 
+    
     def evaluate_board(self):
-        score = 0
-        center_array = self.board[:, 3]
-        score += np.sum(center_array == 1) * 3
-        score -= np.sum(center_array == -1) * 3
-        return score
+        def score_window(window, player):
+            own = window.count(player)
+            opponent = window.count(-player)
+            empty = window.count(0)
+
+            if own == 4:
+                return 1000
+            if opponent == 4:
+                return -1000
+            if own == 3 and empty == 1:
+                return 50
+            if opponent == 3 and empty == 1:
+                return -80
+            if own == 2 and empty == 2:
+                return 10
+            if opponent == 2 and empty == 2:
+                return -10
+            return 0
+
+        def evaluate_player(player):
+            score = 0
+
+            # Center column control
+            center = list(self.board[:, 3])
+            score += center.count(player) * 6
+
+            # Horizontal windows
+            for row in range(6):
+                for col in range(4):
+                    window = list(self.board[row, col:col + 4])
+                    score += score_window(window, player)
+
+            # Vertical windows
+            for row in range(3):
+                for col in range(7):
+                    window = list(self.board[row:row + 4, col])
+                    score += score_window(window, player)
+
+            # Diagonal windows: down-right
+            for row in range(3):
+                for col in range(4):
+                    window = [
+                        self.board[row + i, col + i]
+                        for i in range(4)
+                    ]
+                    score += score_window(window, player)
+
+            # Diagonal windows: up-right
+            for row in range(3, 6):
+                for col in range(4):
+                    window = [
+                        self.board[row - i, col + i]
+                        for i in range(4)
+                    ]
+                    score += score_window(window, player)
+
+            return score
+
+        # Positive scores favor player 1.
+        # Negative scores favor player -1.
+        return (
+            evaluate_player(1) -
+            evaluate_player(-1)
+        ) / 2
 
 
 class Othello:
@@ -63,7 +123,6 @@ class Othello:
         self.board[4, 3] = 1
         self.board[4, 4] = -1
 
-        # Directions to check around a piece
         self.directions = [
             (-1, -1), (-1, 0), (-1, 1),
             (0, -1),           (0, 1),
@@ -132,7 +191,6 @@ class Othello:
         return True
 
     def check_winner(self):
-        # The game ends when neither player can move
         if self.get_valid_moves(1) or self.get_valid_moves(-1):
             return None
 
@@ -160,9 +218,24 @@ class Othello:
         print("X:", np.sum(self.board == 1),
               "O:", np.sum(self.board == -1))
 
+    
     def evaluate_board(self):
-        # Basic evaluation using piece difference
-        return int(
+        weights = np.array([
+            [100, -20, 10,  5,  5, 10, -20, 100],
+            [-20, -50, -2, -2, -2, -2, -50, -20],
+            [ 10,  -2,  5,  1,  1,  5,  -2,  10],
+            [  5,  -2,  1,  0,  0,  1,  -2,   5],
+            [  5,  -2,  1,  0,  0,  1,  -2,   5],
+            [ 10,  -2,  5,  1,  1,  5,  -2,  10],
+            [-20, -50, -2, -2, -2, -2, -50, -20],
+            [100, -20, 10,  5,  5, 10, -20, 100]
+        ])
+
+        positional_score = np.sum(self.board * weights)
+
+        piece_score = (
             np.sum(self.board == 1) -
             np.sum(self.board == -1)
         )
+
+        return float(positional_score + piece_score)
